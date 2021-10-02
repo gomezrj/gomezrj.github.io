@@ -24,7 +24,7 @@ a.link:link, a.link:visited{
   transition: color 300ms;
 }
 a.link:hover{
-  text-decoration: underline 0.07em;
+  text-decoration: underline 0.1em;
   color: crimson;
 }
 /* Each section has a container */
