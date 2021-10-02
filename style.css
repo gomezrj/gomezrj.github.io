@@ -85,12 +85,24 @@ a.link:hover{
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-  padding: 20px;
+  margin: 20px;
   display: block;
+}
+#header a.activepage{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 2px solid white;
+  border-radius: 5px;
 }
 #header .navbar ul li:hover a{
   color: crimson;
   transition: color 300ms ease;
+}
+#header .navbar ul li:hover a.activepage{
+  border-color: crimson;
+  transition: 300ms ease;
 }
 #header .menu{
   margin-right: 10px;
