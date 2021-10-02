@@ -18,7 +18,7 @@ a, a:active {
 }
 /* The class link is manually used for styling links */
 a.link:link, a.link:visited{
-  text-decoration: underline 0.07em;
+  text-decoration: underline 0.1em;
   text-decoration-color: #b3b3b3;
   transition: text-decoration-color 300ms;
   transition: color 300ms;
