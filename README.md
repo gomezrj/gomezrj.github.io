@@ -1,1 +1,0 @@
-# gomezrj.github.io
