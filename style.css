@@ -27,6 +27,23 @@ a.link:hover{
   text-decoration: underline 0.1em;
   color: crimson;
 }
+/* Button */
+.cta{
+  display: inline-block;
+  padding: 10px 30px;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: .07rem;
+  transition: .4s ease;
+  transition-property: background-color, color;
+}
+.cta:hover{
+  color: white;
+  background-color: crimson;
+}
 /* Each section has a container */
 .container{
   min-height: 100vh;
@@ -35,7 +52,40 @@ a.link:hover{
   align-items: center;
   justify-content: center;
 }
-
+/* Section customization */
+.section-title{
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform:  uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+.section-description{
+  font-size: 1.7rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  text-align: left;
+}
+/* Page introduction */
+.page-introduction{
+  padding: 4px 8px 4px 8px;
+  margin-top: 75px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  color: white;
+  background-color: rgba(220,20,60,0.95);
+}
 /* Header section */
 #header{
   position: fixed;
@@ -47,7 +97,7 @@ a.link:hover{
 }
 #header .header{
   min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0);
+  background-color: rgba(0, 0, 0, 0);
   transition: .3s background-color;
 }
 #header .navbar{
@@ -62,7 +112,7 @@ a.link:hover{
 #header .navbar ul{
   list-style: none;
   position: absolute;
-  background-color: rgba(31, 30, 30, 0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   width: 100vw;
   height: 100vh;
   left: 100%;
@@ -108,6 +158,7 @@ a.link:hover{
   margin-right: 10px;
   margin-left: auto;
   margin-top: 10px;
+  margin-bottom: 10px;
   height: 60px;
   width: 60px;
   display: inline-block;
@@ -221,6 +272,8 @@ a.link:hover{
   margin: 0 auto;
   padding: 100px 0;
 }
+/* Especifically for aboutme, but not necessary
+
 #aboutme .section-title{
   font-size: 4.5rem;
   font-weight: 300;
@@ -257,7 +310,56 @@ a.link:hover{
   color: white;
   background-color: crimson;
 }
+*/
 /* END Aboutme section*/
+
+/* Page Introduction section */
+#projects-description .container{
+  min-height: 40vh;
+}
+#projects-description{
+  background-image: url(./img/projects-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+/* END Page Introduction section */
+
+/* Aboutme section */
+#QED .container{
+  min-height: 50vh;
+}
+#QED .QED{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+/* Especifically for QED, but not necessary
+
+#QED .section-title{
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform:  uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+#QED .section-description{
+  font-size: 1.7rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  text-align: left;
+}
+*/
+/* END QED section*/
 
 /* Footer section */
 #footer .section-footer{
@@ -292,41 +394,40 @@ a.link:hover{
 /* END Keyframes */
 
 /* Media Query for Phone */
-@media only screen and (min-width:320px){
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .cta{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+  h1.section-title{
+    font-size: 4rem;
+  }
+  .section-description{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   /* Jaime */
   #Jaime h1{
     font-size: 3.5rem;
   }
   /* END Jaime */
-  /* About me */
-  #aboutme h1.section-title{
-    font-size: 4rem;
-  }
-  #aboutme .section-description{
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  #aboutme .cta{
-    padding: 10px 20px;
-    font-size: 1.2rem;
-  }
-  /* END About me */
+
 }
 /* END Media Query for Phone */
 
 /* Media Query for Tablet */
-@media only screen and (min-width:768px){
+@media only screen and (min-width:768px) and (max-width: 1019px) {
   /* Jaime */
   #Jaime h1{
     font-size: 7rem;
   }
   /* END Jaime */
   /* About me */
-  #aboutme .section-description{
+  .section-description{
     margin-left: 40px;
     margin-right: 40px;
   }
-  #aboutme .cta{
+  .cta{
     padding: 10px 30px;
     background-color: transparent;
     font-size: 1.7rem;
@@ -336,11 +437,7 @@ a.link:hover{
 /* END Media Query for Tablet */
 
 /* Media Query for Desktop */
-@media only screen and (min-width:1020px){
-  .cta{
-    font-size: 2.5rem;
-    padding: 20px 60px;
-  }
+@media only screen and (min-width: 1020px) {
   /* Header */
   #header .menu{
     display: none;
@@ -364,11 +461,5 @@ a.link:hover{
     font-size: 1.8rem;
   }
   /* END Header */
-  /* Aboutme */
-  #aboutme .section-description{
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-  /* END Aboutme */
 }
 /* END Media Query for Desktop */
