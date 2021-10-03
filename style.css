@@ -128,7 +128,13 @@ a.link:hover{
 #header .navbar ul.active{
   left: 0;
 }
-#header .navbar ul a{
+#header .navbar ul li a{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 2px solid transparent;
+  border-radius: 5px;
   font-size: 2.5rem;
   font-weight: 500;
   letter-spacing: .2rem;
@@ -138,13 +144,8 @@ a.link:hover{
   margin: 20px;
   display: block;
 }
-#header a.activepage{
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 8px;
-  padding-right: 8px;
-  border: 2px solid white;
-  border-radius: 5px;
+#header .navbar ul li a.activepage{
+  border-color: white;
 }
 #header .navbar ul li:hover a{
   color: crimson;
