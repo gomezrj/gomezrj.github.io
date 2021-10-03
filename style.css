@@ -314,7 +314,7 @@ a.link:hover{
 */
 /* END Aboutme section*/
 
-/* Page Introduction section */
+/* Projects Page Introduction section */
 #projects-description .container{
   min-height: 40vh;
 }
@@ -325,7 +325,33 @@ a.link:hover{
   position: relative;
   z-index: 1;
 }
-/* END Page Introduction section */
+/* END Projects Page Introduction section */
+
+/* Lecture Notes Page Introduction section */
+#lecturenotes-description .container{
+  min-height: 40vh;
+}
+#lecturenotes-description{
+  background-image: url(./img/lecturenotes-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+/* END Lecture Notes Page Introduction section */
+
+/* Theses Page Introduction section */
+#theses-description .container{
+  min-height: 40vh;
+}
+#theses-description{
+  background-image: url(./img/theses-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+/* END Theses Page Introduction section */
 
 /* Aboutme section */
 #QED .container{
