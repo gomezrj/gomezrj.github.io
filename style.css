@@ -232,7 +232,7 @@ a.link:hover{
 #Jaime h1{
   display: block;
   width: fit-content;
-  font-size: 4rem;
+  font-size: 7rem;
   position: relative;
   color: transparent;
   animation: text_reveal .5s ease forwards;
