@@ -369,24 +369,24 @@ a.link:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1500px;
   margin-top: 50px;
   margin-bottom: 50px;
   flex-wrap: wrap;
 }
 .subject{
-  flex-basis: 45%;
+  flex-basis: 40%;
   display: flex;
   align-items: flex-start;
   justify-content: left;
   flex-direction: column;
-  min-height: 200px;
+  min-height: 210px;
   margin: 1.5%;
   padding: 30px;
   border-radius: 15px;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  transition: box-shadow 300ms;
 }
 .subject::after{
   content: '';
@@ -399,10 +399,13 @@ a.link:hover{
   opacity: 0.3;
   z-index: -1;
 }
+.subject:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,.7);
+}
 .subject .subject-title{
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .subject .subject-description{
   font-size: 1.4rem;
@@ -522,17 +525,19 @@ a.link:hover{
     flex-basis: 80%;
     min-height: 0;
   }
+  .subject .subject-description{
+    width: 100%;
+  }
   /* Jaime */
   #Jaime h1{
     font-size: 3.5rem;
   }
   /* END Jaime */
-
 }
 /* END Media Query for Phone */
 
 /* Media Query for Tablet */
-@media only screen and (min-width:768px) and (max-width: 1019px) {
+@media only screen and (min-width:768px) and (max-width: 1030px) {
   /* Jaime */
   #Jaime h1{
     font-size: 7rem;
@@ -554,7 +559,7 @@ a.link:hover{
 }
 /* END Media Query for Tablet */
 /* Media Query for Desktop */
-@media only screen and (min-width: 1020px) {
+@media only screen and (min-width: 1031px) {
   /* Header */
   #header .menu{
     display: none;
