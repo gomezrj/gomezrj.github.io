@@ -341,11 +341,11 @@ a.link:hover{
 /* END Lecture Notes Page Introduction section */
 
 /* Theses Page Introduction section */
-#theses-description .container{
+#papers-description .container{
   min-height: 40vh;
 }
-#theses-description{
-  background-image: url(./img/theses-bg.jpg);
+#papers-description{
+  background-image: url(./img/papers-bg.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
