@@ -92,6 +92,17 @@ a.link:hover{
   text-align: left;
   margin: 50px auto 0 40px;
 }
+/* PDF frames */
+.pdf-frame{
+  align: center;
+  width: 100%;
+  margin: 15px auto 0 auto;
+}
+.pdf-frame iframe{
+  width: 70%;
+  height: 700px;
+  border: transparent;
+}
 /* Header section */
 #header{
   position: fixed;
@@ -501,6 +512,33 @@ a.link:hover{
   z-index: -1;
 }
 /* END Papers Page Introduction section */
+/* Bachelor's thesis */
+#bachelors-description{
+  background-image: url(./img/bachelors-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+#Bachelorscontents .BC{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 0;
+  padding: 30px 0 0;
+}
+#Bachelorscontents .BC .section-description{
+  margin-bottom: 12px;
+}
+#Bachelorscontents .BC h3{
+  padding-bottom: 20px;
+}
+#Bachelorspdf .BC{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 80px auto;
+  padding-top: 0;
+}
+/* END Bachelor's thesis */
 
 /* Footer section */
 #footer .section-footer{
@@ -553,6 +591,10 @@ a.link:hover{
   }
   .subject .subject-description{
     width: 100%;
+  }
+  .pdf-frame iframe{
+    width: 90%;
+    height: 400px;
   }
   /* Jaime */
   #Jaime h1{
