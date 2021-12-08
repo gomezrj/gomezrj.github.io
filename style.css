@@ -511,7 +511,29 @@ a.link:hover{
   opacity: 0.4;
   z-index: -1;
 }
+
+#scomm .lecture-notes{
+  margin-top: 0;
+}
+#visualising_quotients{
+  background-image: url(./img/quotients-bg.jpg);
+  background-size: cover;
+  margin: 10px;
+  overflow: hidden;
+}
+#visualising_quotients::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: -1;
+}
 /* END Papers Page Introduction section */
+
 /* Bachelor's thesis */
 #bachelors-description{
   background-image: url(./img/bachelors-bg.jpg);
@@ -542,6 +564,37 @@ a.link:hover{
   padding-top: 0;
 }
 /* END Bachelor's thesis */
+
+/* Visualising quotients */
+#quotients-description{
+  background-image: url(./img/quotients-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+#quotientscontents .VQ .section-description{
+  width: 70%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 12px;
+}
+#quotientscontents .VQ h3{
+  padding-bottom: 20px;
+}
+#quotientscontents .VQ{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 80px auto;
+  padding-top: 0;
+}
+#quotientspdf .VQ{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 80px auto;
+  padding-top: 0;
+}
+/* END Visualising quotients */
 
 /* Footer section */
 #footer .section-footer{
