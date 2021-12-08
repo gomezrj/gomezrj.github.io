@@ -573,6 +573,12 @@ a.link:hover{
   position: relative;
   z-index: 1;
 }
+#quotientscontents .VQ{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 0;
+  padding: 30px 0 0;
+}
 #quotientscontents .VQ .section-description{
   width: 70%;
   margin-left: 20px;
@@ -581,12 +587,6 @@ a.link:hover{
 }
 #quotientscontents .VQ h3{
   padding-bottom: 20px;
-}
-#quotientscontents .VQ{
-  text-align: center;
-  max-width: 1500px;
-  margin: 0 auto 80px auto;
-  padding-top: 0;
 }
 #quotientspdf .VQ{
   text-align: center;
