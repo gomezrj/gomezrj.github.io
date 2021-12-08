@@ -660,6 +660,9 @@ a.link:hover{
   #Bachelorscontents .BC .section-description{
     width: 90%;
   }
+  #quotientscontents .VQ .section-description{
+    width: 90%;
+  }
 }
 /* END Media Query for Phone */
 
