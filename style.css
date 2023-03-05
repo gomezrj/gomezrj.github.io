@@ -558,6 +558,24 @@ a.link:hover{
   z-index: -1;
 }
 
+#FKSTFT{
+  background-image: url(./img/FKSTFT-bg.jpg);
+  background-size: cover;
+  margin: 10px;
+  overflow: hidden;
+}
+#FKSTFT::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: -1;
+}
+
 #scomm .lecture-notes{
   margin-top: 0;
 }
@@ -641,6 +659,37 @@ a.link:hover{
   padding-top: 0;
 }
 /* END Isoper Semester Paper */
+
+/* FKSTFT Semester Paper */
+#FKSTFT-description{
+  background-image: url(./img/FKSTFT-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+#FKSTFT-contents .SP{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 0;
+  padding: 30px 0 0;
+}
+#FKSTFT-contents .SP .section-description{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+#FKSTFT-contents .SP h3{
+  padding-bottom: 20px;
+}
+#FKSTFT-pdf .SP{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 80px auto;
+  padding-top: 0;
+}
+/* END FKSTFT Semester Paper */
 
 /* Visualising quotients */
 #quotients-description{
