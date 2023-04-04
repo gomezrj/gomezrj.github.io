@@ -52,6 +52,20 @@ a.link:hover{
   align-items: center;
   justify-content: center;
 }
+/* There is one of these bad bois for the papers stuff */
+.geometry{
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+}
+.title{
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform:  uppercase;
+  letter-spacing: .2rem;
+}
 /* Section customization */
 .section-title{
   font-size: 4.5rem;
@@ -760,6 +774,9 @@ a.link:hover{
   h1.section-title{
     font-size: 4rem;
   }
+  .title{
+    font-size: 3rem;
+  }
   .section-description{
     margin-left: 20px;
     margin-right: 20px;
@@ -774,6 +791,9 @@ a.link:hover{
   .pdf-frame iframe{
     width: 90%;
     height: 400px;
+  }
+  .geometry{
+    width: 90%;
   }
   /* Jaime */
   #Jaime h1{
@@ -811,6 +831,11 @@ a.link:hover{
   .subject{
     flex-basis: 80%;
     min-height: 0;
+  }
+  .geometry{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
   }
 }
 /* END Media Query for Tablet */
