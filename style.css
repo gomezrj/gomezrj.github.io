@@ -305,11 +305,18 @@ a.link:hover{
 }
 /* END Jaime section */
 /* Aboutme section */
-#aboutme .aboutme{
+.aboutme{
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
   padding: 100px 0;
+}
+
+.downloadButton{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 30px 0;
 }
 /* Especifically for aboutme, but not necessary
 
@@ -362,11 +369,21 @@ a.link:hover{
 }
 /* END Projects Page Introduction section */
 /* QED section */
-#QED .QED{
+.QED{
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding-top: 100px;
+}
+#LaTeX2InD .QED{
+  padding-top: 30px;
+}
+#LaTeX2InD .container{
+  min-height: 0vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* Especifically for QED, but not necessary
 
