@@ -433,12 +433,13 @@ a.link:hover{
   padding-left: 5%;
   padding-right: 5%;
   margin-bottom: 50px;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 .subject{
-  flex-basis: 40%;
+  flex-basis: 0;
   display: flex;
   flex-grow: 1;
+  align-self: stretch;
   align-items: flex-start;
   justify-content: left;
   flex-direction: column;
@@ -574,6 +575,23 @@ a.link:hover{
   opacity: 0.4;
   z-index: -1;
 }
+#masters_thesis{
+  background-image: url(./img/masters-bg.jpg);
+  background-size: cover;
+  margin: 10px;
+  overflow: hidden;
+}
+#master_thesis::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: -1;
+}
 
 #semesterpapers .lecture-notes{
   margin-top: 0;
@@ -669,6 +687,37 @@ a.link:hover{
   padding-bottom: 20px;
 }
 #Bachelorspdf .BC{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 80px auto;
+  padding-top: 0;
+}
+/* END Bachelor's thesis */
+
+/* Bachelor's thesis */
+#masters-description{
+  background-image: url(./img/masters-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+#masterscontents .BC{
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto 0;
+  padding: 30px 0 0;
+}
+#masterscontents .BC .section-description{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+#masterscontents .BC h3{
+  padding-bottom: 20px;
+}
+#masterspdf .BC{
   text-align: center;
   max-width: 1500px;
   margin: 0 auto 80px auto;
