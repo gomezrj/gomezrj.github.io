@@ -443,7 +443,7 @@ a.link:hover{
   align-items: flex-start;
   justify-content: left;
   flex-direction: column;
-  min-height: 210px;
+  /*min-height: 210px;*/
   margin: 1.5%;
   padding: 30px;
   border-radius: 15px;
@@ -558,6 +558,9 @@ a.link:hover{
 #theses .lecture-notes{
   margin-top: 0;
 }
+#theses .container{
+  min-height: 10vh;
+}
 #bachelors_thesis{
   background-image: url(./img/bachelors-bg.jpg);
   background-size: cover;
@@ -595,6 +598,9 @@ a.link:hover{
 
 #semesterpapers .lecture-notes{
   margin-top: 0;
+}
+#semesterpapers .container{
+  min-height: 10vh;
 }
 #isop_ineq{
   background-image: url(./img/isoperimetric-bg.jpg);
@@ -856,6 +862,7 @@ a.link:hover{
   }
   .subject{
     flex-basis: 80%;
+    flex-direction: column;
     flex-grow: 1;
     min-height: 0;
   }
@@ -941,3 +948,23 @@ a.link:hover{
   /* END Header */
 }
 /* END Media Query for Desktop */
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  box-shadow: inset 0 0 1px grey;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
