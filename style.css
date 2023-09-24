@@ -54,7 +54,7 @@ a.link:hover{
 }
 /* There is one of these bad bois for the papers stuff */
 .geometry{
-  width: 80%;
+  max-width: 1300px;
   margin: auto;
   margin-top: 100px;
 }
@@ -422,16 +422,14 @@ a.link:hover{
 /* END Lecture Notes Page Introduction section */
 /* Lecture Notes Subjects */
 #lecture-notes .container{
-  padding-left: 5%;
-  padding-right: 5%;
+  margin: auto;
+  max-width: 1320px;
 }
 .lecture-notes{
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  padding-left: 5%;
-  padding-right: 5%;
   margin-bottom: 50px;
   flex-flow: row wrap;
 }
@@ -444,7 +442,7 @@ a.link:hover{
   justify-content: left;
   flex-direction: column;
   /*min-height: 210px;*/
-  margin: 1.5%;
+  margin: 1%;
   padding: 30px;
   border-radius: 15px;
   position: relative;
@@ -922,7 +920,42 @@ a.link:hover{
 }
 /* END Media Query for Tablet */
 /* Media Query for Desktop */
-@media only screen and (min-width: 1031px) {
+@media only screen and (min-width: 1031px) and (max-width: 1600px) {
+  /* Header */
+  #header .menu{
+    display: none;
+  }
+  #header .container{
+    align-items: right;
+  }
+  #header .navbar ul{
+    margin-right: 30px;
+    margin-left: auto;
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+  #header .navbar ul li{
+    display: inline-block;
+  }
+  #header .navbar ul li a{
+    font-size: 1.8rem;
+  }
+  /* END Header */
+  /* AÑADIR AQUI LOS NUEVOS MARGENES PARA QUE COINCIDA TO BIEN */
+  #lecture-notes .container{
+    margin: auto;
+    max-width: 82%;
+  }
+  .geometry{
+    max-width: 82%;
+  }
+}
+/* END Media Query for Desktop */
+/* Media Query for Large Desktop */
+@media only screen and (min-width: 1601px) {
   /* Header */
   #header .menu{
     display: none;
@@ -947,7 +980,7 @@ a.link:hover{
   }
   /* END Header */
 }
-/* END Media Query for Desktop */
+/* END Media Query for Large Desktop */
 
 /* Scrollbar */
 /* width */
