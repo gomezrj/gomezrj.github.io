@@ -553,14 +553,43 @@ a.link:hover{
   position: relative;
   z-index: 1;
 }
+
+#research .lecture-notes{
+  margin-top: 0;
+}
+#research .container{
+  min-height: 10vh;
+}
+
 #theses .lecture-notes{
   margin-top: 0;
 }
 #theses .container{
   min-height: 10vh;
 }
+
+#StabilityFKSTFT{
+  background-image: url(./img/StabilityFKSTFT-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 10px;
+  overflow: hidden;
+}
+#StabilityFKSTFT::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: -1;
+}
+
 #bachelors_thesis{
   background-image: url(./img/bachelors-bg.jpg);
+  background-position: center;
   background-size: cover;
   margin: 10px;
   overflow: hidden;
@@ -578,6 +607,7 @@ a.link:hover{
 }
 #masters_thesis{
   background-image: url(./img/masters-bg.jpg);
+  background-position: center;
   background-size: cover;
   margin: 10px;
   overflow: hidden;

@@ -36,9 +36,9 @@
     <section id="research">
       <h2 class="title">Research</h2>
       <div class="research">
-        <div class="section-description">
+        <div class="lecture-notes container">
 
-          <!-- MODEL ENTRY
+          <!-- MODEL ENTRY (OLD)
           <ul style="padding-left: 50px">
             <li><i><a class="link" href="link" target="_blank">TITLE</a></i>,<br>
               AUTHORS,<br>
@@ -46,11 +46,14 @@
           </ul>
           -->
 
-          <ol style="padding-left: 50px">
-            <li><i><a class="link" href="https://arxiv.org/abs/2307.09304" target="_blank">Stability of the Faber-Krahn inequality for the short-time Fourier transform</a></i>,<br>
+          <a href="https://arxiv.org/abs/2307.09304" target="_blank" class="subject" id="StabilityFKSTFT">
+            <h2 class="subject-title">Stability of the Faber-Krahn inequality for the short-time Fourier transform</h2>
+            <p class="subject-description">
+              We prove a sharp quantitative version of the Faber-Krahn inequality for the short-time Fourier transform.<br>
               with A. Guerra, J. P. G. Ramos, P. Tilli,<br>
               <b>ArXiv preprint</b>, (2023).</li>
-          </ol>
+            </p>
+          </a>
 
         </div>
       </div>
@@ -146,5 +149,7 @@
     </section>
     <!-- END Footer -->
     <script src="./app.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </body>
 </html>
