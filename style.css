@@ -478,6 +478,7 @@ a.link:hover{
 }
 #subject1{
   background-image: url(./img/subject1-bg.jpg);
+  background-position: center;
   background-size: cover;
   margin: 10px;
   overflow: hidden;
@@ -495,6 +496,7 @@ a.link:hover{
 }
 #subject2{
   background-image: url(./img/subject2-bg.jpg);
+  background-position: center;
   background-size: cover;
   margin: 10px;
 }
