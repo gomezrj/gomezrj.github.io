@@ -507,6 +507,8 @@ body {
     visibility: visible;
   }
   #content.inactive {
-    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition_speed);
   }
 }
