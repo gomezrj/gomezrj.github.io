@@ -458,15 +458,14 @@ body {
   /* The following are the mobile navigation changes */
   .sidebar {
     position: fixed;
-    top: 0;
+    top: -700px;
     right: -100vw; /* hidden off screen */
     width: 100vw;
-    height: 150vh;
+    height: 2000px;
     transition: var(--transition_speed);
     z-index: 10;
     display: block;
     padding-left: 25vw;
-    padding-bottom: 45vh;
     padding-right: 0%;
     align-content:center;
   }
