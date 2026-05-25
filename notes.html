@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Jaime Gómez</title>
+  <!-- Font(s) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-fade"></div>
+  <div class="page">
+    <!-- This overlay darkens the page when the side menu is pulled on tablets -->
+    <div class="overlay" id="overlay"></div>
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+      <!-- Profile Picture -->
+      <div class="profile-pic bordered"></div>
+
+      <!-- Navigation -->
+      <nav class="nav-links bordered">
+        <a class="nav-item bordered hoverable" href="./index.html">About</a>
+        <a class="nav-item bordered hoverable" href="./projects.html">Projects</a>
+        <a class="selected" href="">Notes</a>
+        <a class="nav-item bordered hoverable" href="./research.html">Research</a>
+        <a class="nav-item bordered hoverable" href="./other.html">Other</a>
+      </nav>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content bordered">
+      <!-- MOBILE MODE MENU -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <h1>Lecture notes</h1>
+
+      <p>
+        During my time as a student I liked to <a class="link" target="_blank" href="https://francescoruscelli2.github.io/posts/vim.html">type lecture notes</a> à la <a class="link" target="_blank" href="https://castel.dev">Gilles Castel</a>. You can find some of them below.
+      </p>
+
+      <div class="deck">
+        <a target="_blank" href="./src/notes/FunctionalAnalysisII.pdf">
+          <div class="card" style="
+            background-image: url('./img/card-bg1.jpg');
+            background-position: center;
+            background-size: cover;
+            ">
+            <h2>Functional Analysis II</h2>
+            <p>
+              Lecture notes for a semester course given by Prof. Marc Burger at ETH during spring semester 2022. Contents include Banach algebras, spectral theory and Fourier analysis on locally compact abelian groups.
+            </p>
+          </div>
+        </a>
+
+        <a target="_blank" href="./src/notes/HarmonicAnalysis.pdf">
+          <div class="card" style="
+            background-image: url('./img/card-bg2.jpg');
+            background-position: center;
+            background-size: cover;
+            ">
+            <h2>Harmonic Analysis</h2>
+            <p>
+              Lecture notes for a semester course by Prof. Joachim Krieger at EPFL during spring semester 2024. Topics include Fourier theory, aspects in number theory and the Calderón-Zygmund theory.
+            </p>
+          </div>
+        </a>
+
+        <a target="_blank" href="./src/notes/AlgebraicTopology.pdf">
+          <div class="card" style="
+            background-image: url('./img/card-bg3.jpg');
+            background-position: center;
+            background-size: cover;
+            ">
+            <h2>Algebraic Topology</h2>
+            <p>
+              Lecture notes for a semester course on algebraic topology by Prof. Will J. Merry at ETH during autumn semester 2021. Topics include the fundamental group, singular homology and cohomology.
+            </p>
+          </div>
+        </a>
+        
+      </div>
+    </main>
+    
+  </div>
+  <div class="bottom-fade"></div>
+  <script src="./mobilenavmenu.js"></script>
+</body>
+</html>

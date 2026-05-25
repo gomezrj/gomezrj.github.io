@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Jaime Gómez</title>
+  <!-- ArXiv feed -->
+  <!-- At some point I decided to sync the atom2 feed in https://arxiv.org/a/gomez_j_4.atom2
+  containing all my publications, but for some reason ArXiv blocks the data fetching,
+  so I cannot build the list of papers from ArXiv at runtime. The JavaScript console was
+  giving the following even when running from a local server:
+  [Error] Failed to load resource: the server responded with a status of 404 (Not Found) (favicon.ico, line 0)
+  [Error] Origin http://127.0.0.1:8080 is not allowed by Access-Control-Allow-Origin. Status code: 200
+  [Error] Fetch API cannot load https://arxiv.org/a/gomez_j_4.atom2 due to access control checks.
+  [Error] Failed to load resource: Origin http://127.0.0.1:8080 is not allowed by Access-Control-Allow-Origin. Status code: 200 (gomez_j_4.atom2, line 0)
+  [Error] Unhandled Promise Rejection: TypeError: Load failed -->
+  <!-- Font(s) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-fade"></div>
+  <div class="page">
+    <!-- This overlay darkens the page when the side menu is pulled on tablets -->
+    <div class="overlay" id="overlay"></div>
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+      <!-- Profile Picture -->
+      <div class="profile-pic bordered"></div>
+
+      <!-- Navigation -->
+      <nav class="nav-links bordered">
+        <a class="selected" href="">About</a>
+        <a class="nav-item bordered hoverable" href="./projects.html">Projects</a>
+        <a class="nav-item bordered hoverable" href="./notes.html">Notes</a>
+        <a class="nav-item bordered hoverable" href="./research.html">Research</a>
+        <a class="nav-item bordered hoverable" href="./other.html">Other</a>
+      </nav>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content bordered">
+      <!-- MOBILE MODE MENU -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <h1>About me</h1>
+
+      <p>
+        I am a PhD student at <a class="link" target="_blank" href="https://www.epfl.ch/en/">EPFL</a>
+        under the supervision of <a class="link" target="blank" href="https://people.epfl.ch/joachim.krieger">Prof. Joachim Krieger</a>. My research interests lie on harmonic analysis and partial differential equations. Specifically, I have worked on
+        <ul>
+          <li>Fourier uncertainty principles.</li>
+          <li>Stability estimates for functional and geometric inequalities.</li>
+          <li>Quantitative aspects in dispersive PDEs.</li>
+          <li>Time-frequency analysis and signal processing.</li>
+        </ul>
+      </p>
+      
+      <p>
+        I obtained my master's degree in mathematics at <a class="link" target="_blank" href="https://ethz.ch/en.html">ETH Zurich</a> in 2023, and my bachelor's degree in mathematics at <a class="link" target="_blank" href="https://www.uam.es/uam/inicio">Universidad Autónoma de Madrid</a> in 2021.
+      </p>
+
+      <p>
+        You can check out my CV and other useful links below, and you can contact me via email
+        at <a class="link" target="_blank" href="mailto:jaime.gomezramirez@epfl.ch">jaime.gomezramirez@epfl.ch</a>.
+      </p>
+      <p class="spacer">
+        <a class="button" href="./src/ACV.pdf" target="_blank" type="button">CV</a>
+        <a class="button" href="https://arxiv.org/a/gomez_j_4.html" target="_blank" type="button">ArXiv</a>
+        <a class="button" href="https://orcid.org/0009-0008-8259-1997" target="_blank" type="button">ORCiD</a>
+        <a class="button" href="https://github.com/gomezrj" target="_blank" type="button">GitHub</a>
+        <a class="button" href="mailto:jaime.gomezramirez@epfl.ch" target="_blank" type="button">Email</a>
+      </p>
+    </main>
+    
+  </div>
+  <div class="bottom-fade"></div>
+  <script src="./mobilenavmenu.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Jaime Gómez</title>
+  <!-- Font(s) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-fade"></div>
+  <div class="page">
+
+    <!-- This overlay darkens the page when the side menu is pulled on tablets -->
+    <div class="overlay" id="overlay"></div>
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Profile Picture -->
+      <div class="profile-pic bordered"></div>
+
+      <!-- Navigation -->
+      <nav class="nav-links bordered">
+        <a class="nav-item bordered hoverable" href="./index.html">About</a>
+        <a class="nav-item bordered hoverable" href="./projects.html">Projects</a>
+        <a class="nav-item bordered hoverable" href="./notes.html">Notes</a>
+        <a class="selected" href="">Research</a>
+        <a class="nav-item bordered hoverable" href="./other.html">Other</a>
+      </nav>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content bordered">
+      <!-- MOBILE MODE MENU -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <h1>Research</h1>
+
+      <p>
+        Below you can find my publications and preprints. Alternatively, you may look at them over in my <a class="link" target="_blank" href="https://arxiv.org/a/gomez_j_4.html">ArXiv author page</a>.
+      </p>
+
+      <div class="deck">
+        
+        <div
+          data-link="https://arxiv.org/abs/2501.18398"
+          class="card" style="
+          background-image: url('./img/MultisolitonHartree.jpg')">
+          <h2>Multisoliton solutions and blow-up for the Hartree equation</h2>
+          <p>
+            We construct multisoliton solutions for the \( L^2 \)-critical Hartree equation with trajectories asymptotically obeying a many-body law.<br>
+            with Tobias Schmid and Yutong Wu.
+          </p>
+          <p class="card-footer">
+            <a>Preprint (2025)</a>
+            <span class="card-links">
+              <a target="_blank" href="https://arxiv.org/abs/2501.18398">
+                <!-- <img src="./icons/arxiv.svg" alt="arXiv"> -->
+                arXiv:2501.18398
+              </a>
+              <a target="_blank" href="./src/bibtex/HartreeMultisoliton.bib">
+                <!-- <img src="./icons/bibtex.svg" alt="bibtex"> -->
+                 BibTex
+              </a>
+            </span>
+          </p>
+        </div>
+        
+        <div
+          data-link="https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms.70114"
+          class="card" style="
+          background-image: url('./img/UniformConcentration.jpg');
+          ">
+          <h2>Uniform stability of concentration inequalities and applications</h2>
+          <p>
+            We prove sharp quantitative versions of Faber-Krahn inequalities for certain continuous Wavelet transforms.<br>
+            With D. Kalaj, P. Melentijević, J. P. G. Ramos.
+          </p>
+          <p class="card-footer">
+            <a>Proc. London Math. Society (2025)</a>
+            <span class="card-links">
+              <a target="_blank" href="https://arxiv.org/abs/2411.16010">
+                <!-- <img src="./icons/arxiv.svg" alt="arXiv"> -->
+                 arXiv:2411.16010
+              </a>
+              <a target="_blank" href="./src/bibtex/StabilityWavelets.bib">
+                <!-- <img src="./icons/bibtex.svg" alt="bibtex"> -->
+                BibTex
+              </a>
+            </span>
+          </p>
+        </div>
+        
+        <div
+          data-link="https://link.springer.com/article/10.1007/s00222-024-01248-2"
+          class="card"
+          style="
+          background-image: url('./img/StabilitySTFT.JPG')">
+          <h2>Stability of the Faber-Krahn inequality for the short-time Fourier transform</h2>
+          <p>
+            We prove the sharp quantitative Faber-Krahn inequality for the short-time Fourier transform.<br>
+            With A. Guerra, J. P. G. Ramos, P. Tilli.
+          </p>
+          <p class="card-footer">
+            <a>Inventiones Mathematicae (2024)</a>
+            <span class="card-links">
+              <a target="_blank" href="https://arxiv.org/abs/2307.09304">
+                <!-- <img src="./icons/arxiv.svg" alt="arXiv"> -->
+                 arXiv:2307.09304
+              </a>
+              <a target="_blank" href="./src/bibtex/StabilitySTFT.bib" download="StabilitySTFT.bib">
+                <!-- <img src="./icons/bibtex.svg" alt="bibtex"> -->
+                 BibTex
+              </a>
+            </span>
+          </p>
+        </div>
+
+      </div>
+    </main>
+    
+  </div>
+  <div class="bottom-fade"></div>
+  <script src="./divlink.js"></script>
+  <script src="./mobilenavmenu.js"></script>
+</body>
+</html>
