@@ -1,16 +1,20 @@
 const hamburger = document.getElementById("hamburger");
 const mobile_sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");
+const body = document.getElementById("body");
 
 hamburger.addEventListener("click", () => {
   mobile_sidebar.classList.toggle("active");
   overlay.classList.toggle("active");
   hamburger.classList.toggle("active");
+  body.classList.toggle("scrolling");
+  console.log("Mobile menu toggled");
 });
 
 overlay.addEventListener("click", () => {
   sidebar.classList.remove("active");
   overlay.classList.remove("active");
   hamburger.classList.remove("active");
-  console.log("Closed overlay!")
+  body.classList.toggle("scrolling");
+  console.log("Tablet menu closed")
 });
