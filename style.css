@@ -483,6 +483,7 @@ body {
   }
   .overlay {
     display: none;
+    transition: var(--transition_speed);
   }
   .hamburger {
     right: 23px;
@@ -498,5 +499,18 @@ body {
   }
   .hamburger.active {
     visibility: visible;
+  }
+  .overlay.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 250%;
+    height: 250%;
+    background: var(--background_color);
+    transition: var(--transition_speed);
+    z-index: 10;
   }
 }
