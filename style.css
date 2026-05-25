@@ -437,7 +437,6 @@ body {
   /* The following changes are necessary for the flow of the site */
   body {
     padding: 20px;
-    overflow: hidden;
   }
   .deck {
     margin: 0;
@@ -489,6 +488,7 @@ body {
     right: 23px;
   }
   #content {
+    visibility: visible;
     transition: var(--transition_speed);
   }
   /* There is an annoying bug on safari mobile where the contents of the page show when the navigation menu is extended. To fix this, I simply hide the entire page when this is the case. */
