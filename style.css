@@ -405,6 +405,8 @@ body {
     transition: var(--transition_speed);
     z-index: 49;
     display: block;
+    overflow-y: auto;
+    /* -webkit-overflow-scrolling: touch; */
     /* align-content: center; */
   }
   .sidebar.active {
