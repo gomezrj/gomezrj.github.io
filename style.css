@@ -461,11 +461,12 @@ body {
     top: 0;
     right: -100vw; /* hidden off screen */
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     transition: var(--transition_speed);
     z-index: 10;
     display: block;
     padding-left: 25vw;
+    padding-bottom: 45vh;
     padding-right: 0%;
     align-content:center;
   }
