@@ -488,7 +488,7 @@ body {
     right: 23px;
   }
   /* There is an annoying bug on safari mobile where the contents of the page show when the navigation menu is extended. To fix this, I simply hide the entire page when this is the case. */
-  .overlay.active {
+  /* .overlay.active {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -498,9 +498,15 @@ body {
     background: var(--background_color);
     transition: var(--transition_speed);
     z-index: 10;
-  }
+  } */
   #body.scrolling {
     height: 100%;
     overflow: hidden;
+  }
+  .hamburger.active {
+    visibility: visible;
+  }
+  #content.inactive {
+    visibility: hidden;
   }
 }
