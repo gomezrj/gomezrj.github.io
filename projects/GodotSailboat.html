@@ -184,7 +184,7 @@
       </p>
 
       <p>
-        In summary, at each physics cycle we use a series of geometric methods to compute and save the aerodynamic forces acting on the sails and to deform the sail geometry to retain visual coherence (and to accurately simulate the surface of the sail in the future).
+        In summary, at each physics cycle we use a series of geometric methods to compute and save the aerodynamic forces acting on the sails and to deform the sail geometry to retain visual coherence (and to accurately simulate the surface of the sail in the future). For the specific implementation, check out the <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/main_sail_3d.gd" target="_blank">main sail class script</a> and the <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/jib_sail_3d.gd" target="_blank">jib class script</a> on Github.
       </p>
 
       <h3>Keel and Rudder</h3>
@@ -197,6 +197,10 @@
       </p>
       <p>
         In the of the rudder, user input has to be taken into account. The way this is done is by rotating the pivot point through which the rudder attaches to the boat. This keeps the simulation physics-based and realistically grounded in the dynamical aspects rather than manually introducing a torque component to force the boat to respond to user input. This can be checked by placing the boat facing the wind with parallel sails and zero velocity. In real life one would be placing themselves in the middle of the 'no sail zone'. In this scenario, water flow is negated and the rudder becomes ineffective.
+      </p>
+
+      <p>
+        For the details of the implementation, you can check out the <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/keel_3d.gd" target="_blank">keel class script</a> and the <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/rudder_3d.gd" target="_blank">rudder class script</a> on Github.
       </p>
 
       <h3>Rig</h3>
@@ -224,6 +228,10 @@
       <p>
         Apart from the boom, the current implementation also takes into account the position of the head sail.
         This makes the rig is a vital component. Just like in real life, it is also very modular in terms of the additional functions it can take. It also physically holds the points to which the sails need to be attached, and additional sub-components (such as a boom vang) can be incorporated into it. It can be equipped with various other sails, like spinnakers for sailing downwind. This is where many of the more advanced sailboat modeling challenges come into play, and where the current modular approach shows good promise.
+      </p>
+
+      <p>
+        For more details, check out the <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/fore_aft_rig_3d.gd" target="_blank">rig class script</a> on Github.
       </p>
 
       <h3>Hull</h3>
@@ -278,6 +286,17 @@
           </li>
         </ol>
       </p>
+
+      <p>
+        For the details concerning the implmentation, check out the <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/hull_3d.gd" target="_blank">hull class script</a> on Github.
+      </p>
+
+      <h3>The saiboat</h3>
+
+      <p>
+        Finally, the module that contains all the components is the rigid body representing the sailboat. The specific implementation can be found in its <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/physics_sailboat_3d.gd" target="_blank">class script</a> on Github. It contains references to its components and integrates the forces that they compute. Importantly, the sailboat script also contains visual debugging options, such as the arrows representing the force vectors in the video of the simulation.
+      </p>
+      
 
       <h2 id="limitations">Model limitations</h2>
 
