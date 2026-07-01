@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Jaime Gómez</title>
+  <!-- Font(s) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+  <div class="top-fade"></div>
+  <div class="page">
+    <!-- This overlay darkens the page when the side menu is pulled on tablets -->
+    <div class="overlay" id="overlay"></div>
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+      <!-- Profile Picture -->
+      <div class="profile-pic bordered"></div>
+
+      <!-- Navigation -->
+      <nav class="nav-links bordered">
+        <a class="nav-item bordered hoverable" href="../index.html">About</a>
+        <a class="selected" href="../projects.html">Projects</a>
+        <a class="nav-item bordered hoverable" href="../notes.html">Notes</a>
+        <a class="nav-item bordered hoverable" href="../research.html">Research</a>
+        <a class="nav-item bordered hoverable" href="../other.html">Other</a>
+      </nav>
+
+    </aside>
+
+    <!-- MOBILE MODE MENU -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="content bordered" id="content">
+
+      <h1>LaTeX2InD</h1>
+
+      <p>
+        LaTeX2InD originated as a quick-fix solution to the lack of tools for typesetting mathematics in InDesign, the program that we used during my time at UAM to craft the <a class="link" target="_blank" href="https://qed.mat.uam.es/revista">student magazine</a>.
+      </p>
+      <p>
+        Since then, it has been used by industry professionals to format mathematical expressions in LaTeX documents into documents on InDesign. It is available for download from my GitHub page (linked below).
+      </p>
+
+      <!-- link al codebase (github) y a la descarga de la demo quizá -->
+      <p class="spacer">
+        <a class="button" href="https://github.com/gomezrj/LaTeX2InD.git" target="_blank" type="button">Github</a>
+      </p>
+      
+    </main>
+    
+  </div>
+  <div class="bottom-fade"></div>
+  <script src="../mobilenavmenu.js"></script>
+</body>
+</html>

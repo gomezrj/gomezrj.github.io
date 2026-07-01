@@ -11,7 +11,12 @@ document.querySelectorAll('.card').forEach(card => {
     }
     //This makes divs clickable essentially
     if (link) {
-      window.open(link, '_blank');
+      if (card.classList.contains('project')){
+        window.location.href = link;
+      }
+      else{
+        window.open(link, '_blank');
+      }
     }
   });
 });

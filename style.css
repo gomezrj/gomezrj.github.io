@@ -77,8 +77,8 @@ html::-webkit-scrollbar {
 
   background: linear-gradient(
     to top,
-    var(--background_color) 40px,
-    rgba(255,255,255,0) 100px
+    var(--background_color) 20px,
+    rgba(255,255,255,0) 60px
   );
 }
 /* ELEMENT STYLES */
