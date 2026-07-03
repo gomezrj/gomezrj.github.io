@@ -159,9 +159,13 @@
         This already highlights one compromise. While we can compute the area of a sail inside Godot by looping through the polygons that form its mesh before the simulation begins (as long as we keep a consistent, absolute scale), it is not possible to bypass the need to replicate the curves \( C_L(\alpha) \) and \( C_D(\alpha) \) from experimental data. This data is not easy to come by. In fact, sail design becomes a very relevant topic at this point: when sails are correctly trimmed, their shape depends on the point of sail the boat is navigating at. One can therefore not even adjust the coefficient curves for a specific NACA profile, as this may agree with the performance of the sail only for low angle of attack (AoA) regimes, and differ for high AoA regimes. 
       </p>
 
+      <img class="bordered" width="100%" src="../img/SailingSailLiftCoeff.jpg" alt="Lift coefficient of the main sail with respect to angle of attack">
+
       <p>
         Furthermore, wind does not affect the sail equally uniformly over all of its surface, and neither is the length of the section of the sail across its height. So the lift and drag equations above are a simplified model that is useful in our case. But if one wishes to increase the granularity and precision of the simulation, one can discretize the sail by splitting it into sections of smaller height and trating them independently at the cost of increasing the computational cost of the simulation. This approach was implemented in the past, and it resulted in a better localization of the sail's center of effort, the point at which the sail experiences lift and drag (equivalent to what the center of mass represents for the weight). However, it did not represent a significant enough improvement given its computational cost.
       </p>
+
+      <img class="bordered" width="100%" src="../img/SailingSailDragCoeff.jpg" alt="Lift coefficient of the main sail with respect to angle of attack">
 
       <p>
         The other main responsibility of the sails is to adjust their geometry in real time. Sails in real life are not rigid meshes and they get their curvature from the wind. Since we are not working in a fluid dynamics framework and since the current prototype considers only physical aspects relevant to the movement of the boat, the sails need to deform their geometry as the boom rotates via a vertex shader script. In our case this entails coming up with a coordinate mapping of the sail in the language of graphical programming.
@@ -192,11 +196,14 @@
       <p>
         The underwater appendages function much in the same way as the sails. They produce (hydrodynamic) lift and drag through the same equation as before, with \( \rho \) now being the density of the water they are flowing through, and with the angle of attack now being formed by the boat with respect to the water flow underneath it. This is why we require an OceanManager component to communicate with both the keel and the rudder, in case a water current might alter slightly this water flow.
       </p>
+
+      <img class="bordered" width="100%" src="../img/SailingKeelRudder.jpg" alt="Keel and rudder">
+
       <p>
         This structure mimics the same problems we had before, with the difference that the regime of angles of attack that both the keel and rudder can experience is a lot smaller than that of the sail. This is because the boat will never effectively move sideways, since that is impeded by the boat's own geometry. This makes it easier (albeit not by a huge margin) to adjust both appendages to fixed, symmetrical NACA profiles and to extract their lift and drag coefficient curves.
       </p>
       <p>
-        In the of the rudder, user input has to be taken into account. The way this is done is by rotating the pivot point through which the rudder attaches to the boat. This keeps the simulation physics-based and realistically grounded in the dynamical aspects rather than manually introducing a torque component to force the boat to respond to user input. This can be checked by placing the boat facing the wind with parallel sails and zero velocity. In real life one would be placing themselves in the middle of the 'no sail zone'. In this scenario, water flow is negated and the rudder becomes ineffective.
+        In the of the rudder, user input has to be taken into account, as well as its angular velocity given that it is very displaced from the center of mass of the boat. The way this is done is by rotating the pivot point through which the rudder attaches to the boat. This keeps the simulation physics-based and realistically grounded in the dynamical aspects rather than manually introducing a torque component to force the boat to respond to user input. This can be checked by placing the boat facing the wind with parallel sails and zero velocity. In real life one would be placing themselves in the middle of the 'no sail zone'. In this scenario, water flow is negated and the rudder becomes ineffective.
       </p>
 
       <p>
@@ -213,6 +220,8 @@
       <p>
         The way that this is achieved is by tightly communicating with the WindManager component and with user input. This decision was taken because in previous versions where this task was delegated to the physics engine, the results were sub-optimal and less representative of the real-life behavior.
       </p>
+
+      <img class="bordered" width="100%" src="../img/SailingRig.jpg" alt="Rig and its sub-components">
 
       <p>
         The rough logic for controlling the boom is as follows:
@@ -271,6 +280,8 @@
         Simultaneously, and just like in the case of the sails, keel and rudder, these dynamics can become almost arbitrarily complex when looked at through the lenses of fluid dynamics. For starters, the viscosity of the fluid already impacts the asymptotic behavior of the drag force itself. For different regimes of Reynolds numbers, drag can be linear or quadratic as a function of the velocity of the object travelling through the fluid. Even for a small interval of Reynolds numbers (a variation in the physical conditions of water/air induced by composition, density, temperature or pressure changes) the drag (and lift) coefficient(s) can vary significantly.
       </p>
 
+      <img class="bordered" width="100%" src="../img/SailingHull.jpg" alt="Hull">
+
       <p>
         These phenomena highlight the astounding complexity of the Navier-Stokes equations, our current best understanding of the behavior of fluids. Which in itself is only a model. A simulation aspiring to capture those many details is necessarily out of the scope of real-time rendering and shifts into the realm of computational fluid dynamics (CFD). It is for this reason that I decided on the current level of detail in my implementation.
       </p>
@@ -295,6 +306,14 @@
 
       <p>
         Finally, the module that contains all the components is the rigid body representing the sailboat. The specific implementation can be found in its <a class="link" href="https://github.com/gomezrj/Godot_Sailboat/blob/Jaime-First-20/Scripts/physics_sailboat_3d.gd" target="_blank">class script</a> on Github. It contains references to its components and integrates the forces that they compute. Importantly, the sailboat script also contains visual debugging options, such as the arrows representing the force vectors in the video of the simulation.
+      </p>
+
+      <video class="bordered" width="100%" controls autoplay loop muted>
+        <source src="../src/projects/GodotSailboatHeeling.mp4" type="video/mp4">
+      </video>
+
+      <p>
+        As a result of each component processing information independently and the RigidBody3D of the sailboat integrating these forces, the boat mimics the heeling behavior seen in real life when navigating upwind, and the windage being the unstable, dominant force pushing the boat in the wind direction when in the no sail zone, which indicates a correct implementation. 
       </p>
       
 
